@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Shcmea = mongoose.Schema;
 
-const User = new Shcmea({
+const userSchema = new Shcmea({
   email: {
     type: String,
     require: true,
@@ -11,4 +11,4 @@ const User = new Shcmea({
   password: { type: String, require: true }
 });
 
-module.exports = mongoose.model("User", User);
+module.exports = mongoose.model("User", userSchema);
